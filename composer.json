@@ -1,0 +1,14 @@
+{
+    "name": "samlitowitz/feed-me",
+    "description": "A library to aggregate feeds from multiple social media platforms",
+    "type": "library",
+    "license": "Apache-2.0",
+    "authors": [
+        {
+            "name": "Sam Litowitz",
+            "email": "samlitowitz@users.noreply.github.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
