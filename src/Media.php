@@ -2,4 +2,10 @@
 
 namespace FeedMe;
 
-interface Media {}
+use FeedMe\Media\Type;
+
+interface Media {
+	// TODO: Improve name `getBinaryData`
+	public function getBinaryData(): string;
+	public function getType(): ?Type;
+}
