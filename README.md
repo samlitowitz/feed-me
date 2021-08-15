@@ -1,1 +1,1 @@
-FeedMe provides an set of interfaces which talks about streams of content.
+Feed-Me provides a set of interfaces which talks about streams of content.

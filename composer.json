@@ -1,6 +1,6 @@
 {
     "name": "samlitowitz/feed-me",
-    "description": "FeedMe provides an set of interfaces which talks about streams of content",
+    "description": "Feed-Me provides an set of interfaces which talks about streams of content",
     "type": "library",
     "license": "Apache-2.0",
     "authors": [
