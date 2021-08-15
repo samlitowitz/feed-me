@@ -1,1 +1,1 @@
-Aggregate feeds across a variety of social media platforms for a single user.
+FeedMe provides an set of interfaces which talks about streams of content.
