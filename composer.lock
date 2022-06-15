@@ -4,8 +4,49 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "295b328c61b185e6f32c670e4c7a4de1",
-    "packages": [],
+    "content-hash": "816a28bc4529335f06357be53946073e",
+    "packages": [
+        {
+            "name": "samlitowitz/streamable",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/samlitowitz/streamable.git",
+                "reference": "36b2951db24968f5ab25991aadabc0ba00854a10"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/samlitowitz/streamable/zipball/36b2951db24968f5ab25991aadabc0ba00854a10",
+                "reference": "36b2951db24968f5ab25991aadabc0ba00854a10",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "9.0.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Streamable\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Sam Litowitz",
+                    "email": "samlitowitz@users.noreply.github.com"
+                }
+            ],
+            "description": "Interfaces and implementations to create streams from data.",
+            "support": {
+                "issues": "https://github.com/samlitowitz/streamable/issues",
+                "source": "https://github.com/samlitowitz/streamable/tree/v1.0.0"
+            },
+            "time": "2022-06-15T12:34:07+00:00"
+        }
+    ],
     "packages-dev": [
         {
             "name": "doctrine/instantiator",
