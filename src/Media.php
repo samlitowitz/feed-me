@@ -2,6 +2,8 @@
 
 namespace FeedMe;
 
+use Streamable\Stream;
+
 interface Media {
-	public function getBinaryData(): string;
+	public function getBinaryData(): Stream;
 }
