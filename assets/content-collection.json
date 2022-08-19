@@ -1,0 +1,9 @@
+{
+	"types": [
+		{
+			"itemFQN": "FeedMe\\Content",
+			"namespace": "FeedMe\\Content",
+			"className": "Collection"
+		}
+	]
+}

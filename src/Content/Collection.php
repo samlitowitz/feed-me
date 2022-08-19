@@ -2,85 +2,75 @@
 
 namespace FeedMe\Content;
 
-use Countable;
-use FeedMe\Content;
-use Iterator;
-
-final class Collection implements Countable, Iterator
+final class Collection implements \Countable, \Iterator, \JsonSerializable
 {
-	/** @var Content[] $__array */
-	private array $__array = [];
-	/** @var int $__iter */
-	private int $__iter = 0;
+	private $items = [];
+	private $iter;
 
-	public function isEmpty(): bool
+	public static function fromArray(array $items = []): self
 	{
-		return empty($this->__array);
-	}
-
-	public function pop(): ?Content
-	{
-		if ($this->isEmpty()) {
-			return null;
+		$collection = new self();
+		foreach ($items as $item) {
+			$collection->add($item);
 		}
-		$i = count($this->__array) - 1;
-		$content = $this->__array[$i];
-		unset($this->__array[$i]);
-		$this->rewind();
-		return $content;
+		return $collection;
 	}
 
-	public function push(Content $content): void
+	public function count(): int
 	{
-		$this->__array[] = $content;
+		return \count($this->items);
+	}
+
+	public function jsonSerialize()
+	{
+		return $this->toArray();
 	}
 
 	public function toArray(): array
 	{
-		return $this->__array;
+		return $this->items;
 	}
 
-	// -- Countable -- //
-	public function count(): int
+	public function add(FeedMe\Content ...$entities): void
 	{
-		return count($this->__array);
+		\array_push($this->items, ...$entities);
 	}
 
-	// -- Iterator -- //
-	public function current()
+	public function current(): ?FeedMe\Content
 	{
-		if (!$this->valid()) {
+		if ($this->iter === null) {
 			return null;
 		}
-		return $this->__array[$this->__iter];
-	}
-
-	public function key()
-	{
-		if (!$this->valid()) {
+		if (!\array_key_exists($this->iter, $this->items)) {
 			return null;
 		}
-		return $this->__iter;
+		return $this->items[$this->iter];
 	}
 
-	public function next(): void
+	public function next()
 	{
-		if ($this->__iter + 1 >= $this->count()) {
+		if (!$this->valid()) {
 			return;
 		}
-		$this->__iter += 1;
+		$this->iter++;
+	}
+
+	public function key(): ?int
+	{
+		return $this->iter;
 	}
 
 	public function rewind(): void
 	{
-		$this->__iter = 0;
+		if ($this->count() === 0) {
+			$this->iter = null;
+			return;
+		}
+		$this->iter = 0;
 	}
 
 	public function valid(): bool
 	{
-		if ($this->count() < 1) {
-			return false;
-		}
-		return $this->__iter < $this->count();
+		return $this->current() !== null;
 	}
 }
