@@ -15,7 +15,8 @@
     },
     "autoload": {
         "psr-4": {
-            "FeedMe\\": "src/"
+            "FeedMe\\": "src/",
+            "FeedMe\\Examples\\": "examples/"
         }
     },
     "autoload-dev": {
@@ -27,6 +28,7 @@
         "samlitowitz/streamable": "^1.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "^9.5"
+        "phpunit/phpunit": "^9.5",
+        "samlitowitz/php-collection-generator": "^1.0"
     }
 }
