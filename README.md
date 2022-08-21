@@ -3,11 +3,12 @@ Feed-Me provides a set of interfaces to talk about streams of content.
 
 # Table of Contents
 1. [Introduction](#introduction)
-2. [References](#references)
+2. [Example(s)](#examples)
+3.  [References](#references)
 
 # Introduction
 Two interfaces drive the description of content.
-First we have the `Content` interface which describes discrete content as a collection of media.
+First we have the [`Content`](src/Content.php) interface which describes discrete content as a collection of media.
 
 ```php
 interface Content {
@@ -16,13 +17,16 @@ interface Content {
 }
 ```
 
-Second we have the `Media` interface which describes discrete media as a stream of bytes.
+Second we have the [`Media`](src/Media.php) interface which describes discrete media as a stream of bytes.
 
 ```php
 interface Media {
 	public function getData(): Streamable\Stream;
 }
 ```
+
+# Examples
+1. [Twitter](examples/Twitter)
 
 # References
 
