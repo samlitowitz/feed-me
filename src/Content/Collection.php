@@ -31,12 +31,12 @@ final class Collection implements \Countable, \Iterator, \JsonSerializable
 		return $this->items;
 	}
 
-	public function add(FeedMe\Content ...$entities): void
+	public function add(\FeedMe\Content ...$entities): void
 	{
 		\array_push($this->items, ...$entities);
 	}
 
-	public function current(): ?FeedMe\Content
+	public function current(): ?\FeedMe\Content
 	{
 		if ($this->iter === null) {
 			return null;

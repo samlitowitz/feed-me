@@ -1,7 +1,7 @@
 {
 	"types": [
 		{
-			"itemFQN": "FeedMe\\Content",
+			"itemFQN": "\\FeedMe\\Content",
 			"namespace": "FeedMe\\Content",
 			"className": "Collection"
 		}
