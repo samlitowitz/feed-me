@@ -26,7 +26,7 @@ interface Media {
 ```
 
 # Examples
-1. [Twitter](examples/Twitter)
+1. [Twitter](https://github.com/samlitowitz/feed-me-twitter-php-openapi)
 
 # References
 
@@ -37,5 +37,5 @@ interface Media {
 Try three to use it at least three times!
 1. Feed-Me RSS
 2. Feed-Me Facebook
-3. Feed-Me Twitter
+3. [Feed-Me Twitter](https://github.com/samlitowitz/feed-me-twitter-php-openapi)
 
