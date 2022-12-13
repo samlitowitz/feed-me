@@ -11,8 +11,7 @@
     ],
     "minimum-stability": "stable",
     "platform": {
-        "php": "7.4.19",
-        "ext-json": "*"
+        "php": "7.4.19"
     },
     "autoload": {
         "psr-4": {

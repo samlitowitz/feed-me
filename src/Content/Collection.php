@@ -2,6 +2,8 @@
 
 namespace FeedMe\Content;
 
+use FeedMe\Content;
+
 final class Collection implements \Countable, \Iterator, \JsonSerializable
 {
 	private $items = [];
@@ -31,12 +33,12 @@ final class Collection implements \Countable, \Iterator, \JsonSerializable
 		return $this->items;
 	}
 
-	public function add(\FeedMe\Content ...$entities): void
+	public function add(Content ...$entities): void
 	{
 		\array_push($this->items, ...$entities);
 	}
 
-	public function current(): ?\FeedMe\Content
+	public function current(): ?Content
 	{
 		if ($this->iter === null) {
 			return null;
